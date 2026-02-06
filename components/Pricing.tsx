@@ -1,6 +1,6 @@
 import React from 'react';
-import { PRICING_PLANS, SETUP_SERVICES, CONTACT_INFO } from '../constants';
-import { Check, X, Star } from 'lucide-react';
+import { PRICING_PLANS, SETUP_SERVICES, CONTACT_INFO, DEMO_LINK } from '../constants';
+import { Check, X, Star, ExternalLink } from 'lucide-react';
 import Button from './Button';
 
 const Pricing: React.FC = () => {
@@ -33,6 +33,17 @@ const Pricing: React.FC = () => {
               Swiggy / Zomato ko har order par commission dene ke bajaye, apni bakery ka khud ka online system use kijiye.
             </span>
           </p>
+          <div className="mt-8">
+            <Button 
+              variant="outline" 
+              href={DEMO_LINK} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="px-8 py-3 bg-white shadow-sm border-gray-300 text-gray-700 hover:border-pink-500 hover:text-pink-600"
+            >
+              Try Live Demo Before Buying 🧁
+            </Button>
+          </div>
         </div>
 
         {/* Pricing Cards */}
@@ -136,7 +147,7 @@ const Pricing: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                    >
-                     {isLifetime ? 'Get Lifetime Access' : 'Start Free Demo'}
+                     {isLifetime ? 'Get Lifetime Access' : 'Start My Bakery'}
                    </Button>
                 </div>
               </div>
@@ -181,7 +192,7 @@ const Pricing: React.FC = () => {
             <span className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> No commission</span>
             <span className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> No contracts</span>
           </div>
-          <div className="flex justify-center gap-4">
+          <div className="flex justify-center flex-wrap gap-4">
             <Button 
               size="lg" 
               className="animate-pulse"
@@ -189,16 +200,17 @@ const Pricing: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Start Free Demo
+              Get Started Now
             </Button>
             <Button 
               size="lg" 
               variant="outline"
-              href={getWhatsAppLink("Hello Team CakeSarthi! I want to know more about upgrading my current plan.")}
+              href={DEMO_LINK}
               target="_blank"
               rel="noopener noreferrer"
+              className="flex items-center gap-2"
             >
-              Upgrade Anytime
+              View Live Demo <ExternalLink size={20} />
             </Button>
           </div>
         </div>

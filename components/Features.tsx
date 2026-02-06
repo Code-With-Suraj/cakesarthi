@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FEATURES_CUSTOMER, FEATURES_OWNER } from '../constants';
+import { FEATURES_CUSTOMER, FEATURES_OWNER, DEMO_LINK } from '../constants';
 import { ShoppingBag, LayoutDashboard, CheckCircle2 } from 'lucide-react';
 
 const Features: React.FC = () => {
@@ -111,13 +111,18 @@ const Features: React.FC = () => {
             </div>
             
             <div className="pt-4">
-              <button className={`font-semibold text-sm border-b-2 pb-0.5 transition-colors ${
-                activeTab === 'customer' 
-                  ? 'text-pink-600 border-pink-600 hover:text-pink-700' 
-                  : 'text-indigo-600 border-indigo-600 hover:text-indigo-700'
-              }`}>
-                Learn more about {activeTab === 'customer' ? 'Catalog' : 'Dashboard'} &rarr;
-              </button>
+              <a 
+                href={DEMO_LINK} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={`font-semibold text-sm border-b-2 pb-0.5 transition-colors inline-flex items-center gap-1 ${
+                  activeTab === 'customer' 
+                    ? 'text-pink-600 border-pink-600 hover:text-pink-700' 
+                    : 'text-indigo-600 border-indigo-600 hover:text-indigo-700'
+                }`}
+              >
+                See Live {activeTab === 'customer' ? 'Catalog' : 'Dashboard'} Demo &rarr;
+              </a>
             </div>
           </div>
 

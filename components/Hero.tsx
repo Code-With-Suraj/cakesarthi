@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from './Button';
-import { ChevronRight, Star } from 'lucide-react';
-import { CONTACT_INFO } from '../constants';
+import { ChevronRight, Star, ExternalLink } from 'lucide-react';
+import { CONTACT_INFO, DEMO_LINK } from '../constants';
 
 const Hero: React.FC = () => {
   const getWhatsAppLink = (message: string) => {
@@ -44,8 +44,16 @@ const Hero: React.FC = () => {
                 Start Free Trial 
                 <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button size="lg" variant="outline" href="#features">
-                Watch Demo
+              <Button 
+                size="lg" 
+                variant="outline" 
+                href={DEMO_LINK} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="group"
+              >
+                Live Demo 🍰
+                <ExternalLink size={18} className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
               </Button>
             </div>
 

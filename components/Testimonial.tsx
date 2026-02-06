@@ -1,6 +1,7 @@
 import React from 'react';
-import { TESTIMONIALS } from '../constants';
-import { Quote } from 'lucide-react';
+import { TESTIMONIALS, DEMO_LINK } from '../constants';
+import { Quote, ExternalLink } from 'lucide-react';
+import Button from './Button';
 
 const Testimonial: React.FC = () => {
   return (
@@ -38,9 +39,19 @@ const Testimonial: React.FC = () => {
                  <p className="mb-8 text-gray-300">
                    Aaj hi takneek ko apnayein aur apne sapno ko bake karein!
                  </p>
-                 <button className="bg-pink-600 hover:bg-pink-700 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg shadow-pink-500/30 transition-all hover:scale-105">
-                   Get CakeSarthi Now
-                 </button>
+                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                   <button className="bg-pink-600 hover:bg-pink-700 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg shadow-pink-500/30 transition-all hover:scale-105">
+                     Get CakeSarthi Now
+                   </button>
+                   <a 
+                     href={DEMO_LINK} 
+                     target="_blank" 
+                     rel="noopener noreferrer"
+                     className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-10 rounded-full text-lg border border-white/20 transition-all flex items-center justify-center gap-2"
+                   >
+                     Try Live Demo <ExternalLink size={20} />
+                   </a>
+                 </div>
                </div>
                
                {/* Decorative Circles */}

@@ -6,6 +6,8 @@ export const CONTACT_INFO = {
   displayPhone: "+91 88516 66208"
 };
 
+export const DEMO_LINK = "https://script.google.com/macros/s/AKfycbwS_qOle4P3rs_69Z3Ss7TrEbL-xtjJIlWqKbK4U10/dev";
+
 export const NAV_LINKS = [
   { name: 'Home', href: '#home' },
   { name: 'Features', href: '#features' },
@@ -139,7 +141,7 @@ export const PRICING_PLANS = [
       { name: "Occasion Reminder Dashboard", included: true },
       { name: "WhatsApp Offer Link", included: true },
       { name: "Revenue Tracking", included: true },
-      { name: "Custom Branding", included: false },
+      { name: "Custom Branding", included: true },
     ],
     highlight: true,
     badge: "Most Popular",
@@ -163,7 +165,7 @@ export const PRICING_PLANS = [
       { name: "Add-ons Upselling", included: true },
       { name: "Occasion Capture", included: true },
       { name: "Revenue Tracking", included: true },
-      { name: "Custom Branding", included: false },
+      { name: "Custom Branding", included: true },
     ],
     highlight: false,
     badge: "Best Value",

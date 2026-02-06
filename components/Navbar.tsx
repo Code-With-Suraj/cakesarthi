@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Cake } from 'lucide-react';
-import { NAV_LINKS } from '../constants';
+import { Menu, X, Cake, ExternalLink } from 'lucide-react';
+import { NAV_LINKS, DEMO_LINK } from '../constants';
 import Button from './Button';
 
 const Navbar: React.FC = () => {
@@ -46,14 +46,14 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8 items-center">
+          <div className="hidden md:flex space-x-6 items-center">
             {NAV_LINKS.map((link) => {
                const isActive = activeSection === link.href.substring(1);
                return (
                 <a
                   key={link.name}
                   href={link.href}
-                  className={`font-medium transition-colors relative ${
+                  className={`font-medium transition-colors relative text-sm xl:text-base ${
                     isActive ? 'text-pink-600' : 'text-gray-600 hover:text-pink-600'
                   }`}
                 >
@@ -64,7 +64,17 @@ const Navbar: React.FC = () => {
                 </a>
                );
             })}
-            <Button size="sm">Get Started</Button>
+            
+            <a 
+              href={DEMO_LINK} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-pink-600 font-bold text-sm xl:text-base hover:text-pink-700 flex items-center gap-1 border-b border-pink-200"
+            >
+              Live Demo <ExternalLink size={14} />
+            </a>
+
+            <Button size="sm" href="#pricing">Get Started</Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -100,8 +110,17 @@ const Navbar: React.FC = () => {
                 </a>
               );
             })}
+            <a
+              href={DEMO_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block px-3 py-2 rounded-md text-base font-bold text-pink-600 hover:bg-pink-50"
+              onClick={() => setIsOpen(false)}
+            >
+              View Live Demo 🍰
+            </a>
             <div className="pt-4 pb-2 px-3">
-              <Button className="w-full">Get Started</Button>
+              <Button className="w-full" href="#pricing" onClick={() => setIsOpen(false)}>Get Started</Button>
             </div>
           </div>
         </div>
