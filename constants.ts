@@ -1,4 +1,4 @@
-import { ChartBar, Clock, DollarSign, Lock, MessageCircle, Smartphone, User, Users } from 'lucide-react';
+import { ChartBar, Clock, DollarSign, Lock, MessageCircle, Smartphone, User, Users, Grid, ShoppingCart, Calendar, CreditCard, Share2, FileText, PenTool } from 'lucide-react';
 
 export const CONTACT_INFO = {
   whatsapp: "918851666208",
@@ -20,45 +20,60 @@ export const NAV_LINKS = [
 export const FEATURES_CUSTOMER = [
   {
     title: 'Dynamic Menu Catalog',
-    desc: 'Purane zamane ki PDF menu bhejna band karein! CakeSarthi aapke cakes ko ek sunder grid mein dikhata hai with Category Filter (Chocolate, Vanilla, Fruit).',
-    icon: 'Grid',
+    desc: 'Purane PDF menu band! CakeSarthi aapke cakes ko sunder grid mein dikhata hai with Filters.',
+    icon: Grid,
+  },
+  {
+    title: 'Share Items on WhatsApp',
+    desc: 'Customers ko cake pasand aaya? Bas "Share" dabao aur friends ke saath image aur price share karo.',
+    icon: Share2,
+  },
+  {
+    title: 'Custom Cake Request',
+    desc: 'Har customer ko ready-made nahi chahiye. Log size, theme, aur budget ke saath direct request bhej sakte hain.',
+    icon: PenTool,
   },
   {
     title: 'Smart Cart & Add-ons',
-    desc: 'Sirf cake hi kyu? Profit toh extra cheezo mein hai! Auto-suggest candles, toppers, and gift wrapping to increase order value by 20-30%.',
-    icon: 'ShoppingCart',
+    desc: 'Auto-suggest candles, toppers, and gift wrapping to increase order value by 20-30%.',
+    icon: ShoppingCart,
   },
   {
     title: 'Occasion Tracking',
-    desc: 'System customer se delivery time aur occasion (Birthday/Anniversary) poochta hai. Yeh data aapke liye sone ki khadan hai!',
-    icon: 'Calendar',
+    desc: 'System customer se delivery time aur occasion (Birthday/Anniversary) poochta hai.',
+    icon: Calendar,
   },
   {
     title: 'Secure Payment',
-    desc: 'Order confirm karne ke liye 30% advance payment mandatory. Direct UPI integration (GPay, PhonePe, Paytm). No more "Payment baad mein denge!"',
-    icon: 'CreditCard',
+    desc: '30% advance payment mandatory via Direct UPI (GPay, PhonePe). No more "Payment baad mein denge!"',
+    icon: CreditCard,
   },
 ];
 
 export const FEATURES_OWNER = [
   {
+    title: 'Share Invoice on WhatsApp',
+    desc: 'Professional Invoice (Order details, Amount, Pending Payment) ek click mein customer ko bhejein.',
+    icon: FileText,
+  },
+  {
     title: 'Live Business Stats',
-    desc: 'Total Orders, Pending Orders, Revenue, aur Pending Payments - sab kuch ek nazar mein dashboard par dekhein.',
+    desc: 'Total Orders, Pending Orders, Revenue, aur Pending Payments - sab kuch dashboard par.',
     icon: ChartBar,
   },
   {
     title: 'Order Management',
-    desc: 'WhatsApp chat mein order dhundna bhool jaiye. Status badliye: Pending ➡️ Confirmed ➡️ Completed. Transparency builds trust.',
+    desc: 'Order dhundna bhool jaiye. Status badliye: Pending ➡️ Confirmed ➡️ Completed.',
     icon: Users,
   },
   {
     title: "Today's Special Occasions",
-    desc: 'Humara secret weapon! Pata karein aaj kis purane customer ka birthday hai aur unhe wish karke discount offer karein.',
+    desc: 'Pata karein aaj kis purane customer ka birthday hai aur unhe discount offer karein.',
     icon: User,
   },
   {
     title: 'Deep WhatsApp Integration',
-    desc: 'Single click mein "Order Status" ya "Payment Reminder" bhejein. Professional messages without typing.',
+    desc: 'Single click mein "Order Status" ya "Payment Reminder" bhejein without typing.',
     icon: MessageCircle,
   },
 ];
@@ -108,15 +123,15 @@ export const PRICING_PLANS = [
     subtitle: "For Home Bakers",
     features: [
       { name: "Digital Cake Menu", included: true },
-      { name: "Category-wise Menu", included: true },
+      { name: "WhatsApp Product Sharing", included: true },
       { name: "Online Cart & Checkout", included: true },
       { name: "Mobile Friendly Design", included: true },
       { name: "Owner Dashboard", included: true },
       { name: "Order Status Management", included: true },
       { name: "Add-ons Upselling", included: false },
-      { name: "Occasion Capture", included: false },
+      { name: "Custom Cake Requests", included: false },
+      { name: "WhatsApp Invoice Generation", included: false },
       { name: "Occasion Reminder Dashboard", included: false },
-      { name: "WhatsApp Offer Link", included: false },
       { name: "Revenue Tracking", included: false },
       { name: "Custom Branding", included: false },
     ],
@@ -131,14 +146,14 @@ export const PRICING_PLANS = [
     subtitle: "For Local Bakeries",
     features: [
       { name: "Digital Cake Menu", included: true },
-      { name: "Category-wise Menu", included: true },
+      { name: "WhatsApp Product Sharing", included: true },
       { name: "Online Cart & Checkout", included: true },
       { name: "Mobile Friendly Design", included: true },
       { name: "Owner Dashboard", included: true },
       { name: "Order Status Management", included: true },
       { name: "Add-ons Upselling", included: true },
-      { name: "Occasion Capture", included: true },
-      { name: "Occasion Reminder Dashboard", included: true },
+      { name: "Custom Cake Requests", included: true },
+      { name: "WhatsApp Invoice Generation", included: true },
       { name: "WhatsApp Offer Link", included: true },
       { name: "Revenue Tracking", included: true },
       { name: "Custom Branding", included: true },
@@ -163,8 +178,8 @@ export const PRICING_PLANS = [
       { name: "Owner Dashboard", included: true },
       { name: "Order Status Management", included: true },
       { name: "Add-ons Upselling", included: true },
-      { name: "Occasion Capture", included: true },
-      { name: "Revenue Tracking", included: true },
+      { name: "Custom Cake Requests", included: true },
+      { name: "WhatsApp Invoice Generation", included: true },
       { name: "Custom Branding", included: true },
     ],
     highlight: false,
