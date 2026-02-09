@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import USP from './components/USP';
 import Features from './components/Features';
 import WhatsAppFeatures from './components/WhatsAppFeatures';
 import Stats from './components/Stats';
@@ -15,6 +16,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <USP />
         <Features />
         <WhatsAppFeatures />
         <Stats />
