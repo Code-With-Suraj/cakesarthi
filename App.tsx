@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import USP from './components/USP';
 import Features from './components/Features';
 import WhatsAppFeatures from './components/WhatsAppFeatures';
+import DeliveryFeatures from './components/DeliveryFeatures';
 import Stats from './components/Stats';
 import Pricing from './components/Pricing';
 import Benefits from './components/Benefits';
@@ -19,6 +20,7 @@ function App() {
         <USP />
         <Features />
         <WhatsAppFeatures />
+        <DeliveryFeatures />
         <Stats />
         <Pricing />
         <Benefits />
