@@ -6,7 +6,7 @@ export const CONTACT_INFO = {
   displayPhone: "+91 88516 66208"
 };
 
-export const DEMO_LINK = "https://script.google.com/macros/s/AKfycbwS_qOle4P3rs_69Z3Ss7TrEbL-xtjJIlWqKbK4U10/dev";
+export const DEMO_LINK = "https://cakesarthi.surajdx.com";
 
 export const NAV_LINKS = [
   { name: 'Home', href: '#home' },
@@ -129,6 +129,7 @@ export const PRICING_PLANS = [
       { name: "Owner Dashboard", included: true },
       { name: "Order Status Management", included: true },
       { name: "Add-ons Upselling", included: false },
+      { name: "Flexible Delivery Slots", included: false },
       { name: "Sweet Coins Loyalty Program", included: false },
       { name: "Custom Cake Requests", included: false },
       { name: "Smart Location & Distance Calc", included: false },
@@ -140,9 +141,9 @@ export const PRICING_PLANS = [
     color: "gray"
   },
   {
-    name: "Standard",
+    name: "Growth",
     icon: "⭐",
-    price: "₹999",
+    price: "₹1,119",
     period: "/ month",
     subtitle: "For Local Bakeries",
     features: [
@@ -152,6 +153,7 @@ export const PRICING_PLANS = [
       { name: "Mobile Friendly Design", included: true },
       { name: "Owner Dashboard", included: true },
       { name: "Order Status Management", included: true },
+      { name: "Flexible Delivery Slots", included: true },
       { name: "Add-ons Upselling", included: true },
       { name: "Sweet Coins Loyalty Program", included: true },
       { name: "Smart Location & Distance Calc", included: true },
@@ -166,14 +168,14 @@ export const PRICING_PLANS = [
     color: "pink"
   },
   {
-    name: "Professional",
+    name: "Growth Annual",
     icon: "💼",
-    price: "₹7,999",
+    price: "₹9,999",
     period: "/ year",
     subtitle: "For Smart Businesses",
     features: [
-      { name: "Everything in Standard", included: true },
-      { name: "Save 33% (Pay for 8 months, get 12)", included: true },
+      { name: "Everything in Growth", included: true },
+      { name: "Pay for 10 Months, Get 12", included: true },
       { name: "Priority Support", included: true },
       { name: "Sweet Coins Loyalty Program", included: true },
       { name: "Smart Location & Distance Calc", included: true },
@@ -184,29 +186,9 @@ export const PRICING_PLANS = [
       { name: "Custom Branding", included: true },
     ],
     highlight: false,
-    badge: "Best Value",
+    badge: "Best Value – Save 2 Months",
     description: "Commit for a year & save big. Perfect for established bakeries looking for stability.",
     color: "blue"
-  },
-  {
-    name: "Lifetime",
-    icon: "♾️",
-    price: "₹12,999",
-    period: "(One-Time)",
-    subtitle: "For Serious Business Owners",
-    features: [
-      { name: "All Standard Features", included: true },
-      { name: "Custom Branding (Your Name)", included: true },
-      { name: "Sweet Coins Loyalty Program", included: true },
-      { name: "Smart Delivery Management System", included: true },
-      { name: "Future Feature Updates", included: true },
-      { name: "No Monthly Fees", included: true },
-      { name: "Lifetime Access", included: true },
-    ],
-    highlight: false,
-    badge: "High Trust Builder",
-    description: "Ek baar pay kijiye, zindagi bhar use kijiye. Just 30 Swiggy orders commission = Lifetime free.",
-    color: "indigo"
   }
 ];
 

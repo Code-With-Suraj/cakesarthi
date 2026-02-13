@@ -17,7 +17,7 @@ const Pricing: React.FC = () => {
       </div>
 
       <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-base font-semibold tracking-wide text-pink-600 uppercase">
@@ -28,16 +28,16 @@ const Pricing: React.FC = () => {
           </p>
           <p className="mt-4 text-xl text-gray-600">
             No Commission • One-Time Investment • Lifetime Value
-            <br/>
+            <br />
             <span className="text-sm text-gray-500 mt-2 block">
               Swiggy / Zomato ko har order par commission dene ke bajaye, apni bakery ka khud ka online system use kijiye.
             </span>
           </p>
           <div className="mt-8">
-            <Button 
-              variant="outline" 
-              href={DEMO_LINK} 
-              target="_blank" 
+            <Button
+              variant="outline"
+              href={DEMO_LINK}
+              target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 bg-white shadow-sm border-gray-300 text-gray-700 hover:border-pink-500 hover:text-pink-600"
             >
@@ -47,11 +47,10 @@ const Pricing: React.FC = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6 items-start">
+        <div className="grid md:grid-cols-3 gap-6 items-start max-w-6xl mx-auto">
           {PRICING_PLANS.map((plan, idx) => {
-            const isStandard = plan.name === 'Standard';
-            const isProfessional = plan.name === 'Professional';
-            const isLifetime = plan.name === 'Lifetime';
+            const isGrowth = plan.name === 'Growth';
+            const isGrowthAnnual = plan.name === 'Growth Annual';
 
             let borderColor = 'border-gray-200';
             let badgeColor = 'bg-gray-600';
@@ -60,40 +59,33 @@ const Pricing: React.FC = () => {
             let descBg = 'bg-gray-50 text-gray-800 border-gray-100';
             let checkColor = 'text-green-500';
 
-            if (isStandard) {
+            if (isGrowth) {
               borderColor = 'border-pink-500';
               badgeColor = 'bg-pink-600';
               shadowClass = 'shadow-2xl scale-105 z-10';
               titleColor = 'text-pink-600';
               descBg = 'bg-pink-50 text-pink-800 border-pink-100';
               checkColor = 'text-pink-600';
-            } else if (isProfessional) {
+            } else if (isGrowthAnnual) {
               borderColor = 'border-blue-500';
               badgeColor = 'bg-blue-600';
               shadowClass = 'shadow-xl hover:shadow-2xl border-2';
               titleColor = 'text-blue-600';
               descBg = 'bg-blue-50 text-blue-800 border-blue-100';
               checkColor = 'text-blue-600';
-            } else if (isLifetime) {
-              borderColor = 'border-indigo-300';
-              badgeColor = 'bg-indigo-600';
-              shadowClass = 'shadow-xl bg-gradient-to-b from-white to-indigo-50';
-              titleColor = 'text-indigo-600';
-              descBg = 'bg-indigo-100 text-indigo-800 border-indigo-200';
-              checkColor = 'text-indigo-600';
             }
 
             // WhatsApp Message for specific plan
             const planMessage = `Hello Team CakeSarthi! 👋\n\nI am interested in the *${plan.name} Plan* (${plan.price}${plan.period}).\n\nPlease help me get started with my bakery setup.`;
 
             return (
-              <div 
+              <div
                 key={idx}
                 className={`relative bg-white rounded-2xl transition-all duration-300 flex flex-col border ${borderColor} ${shadowClass}`}
               >
                 {/* Badges */}
                 {plan.badge && (
-                  <div className={`absolute -top-4 left-1/2 transform -translate-x-1/2 px-4 py-1 rounded-full text-sm font-bold text-white shadow-md ${badgeColor}`}>
+                  <div className={`absolute -top-4 left-1/2 transform -translate-x-1/2 px-4 py-1 rounded-full text-sm font-bold text-white shadow-md ${badgeColor} whitespace-nowrap`}>
                     {plan.badge}
                   </div>
                 )}
@@ -139,16 +131,16 @@ const Pricing: React.FC = () => {
                 </div>
 
                 <div className="p-6 pt-0 mt-auto">
-                   <Button 
-                    className="w-full" 
-                    variant={isStandard ? 'primary' : isProfessional ? 'secondary' : isLifetime ? 'secondary' : 'outline'}
-                    style={isProfessional ? { backgroundColor: '#2563eb', boxShadow: '0 10px 15px -3px rgba(37, 99, 235, 0.3)' } : {}}
+                  <Button
+                    className="w-full"
+                    variant={isGrowth ? 'primary' : isGrowthAnnual ? 'secondary' : 'outline'}
+                    style={isGrowthAnnual ? { backgroundColor: '#2563eb', boxShadow: '0 10px 15px -3px rgba(37, 99, 235, 0.3)' } : {}}
                     href={getWhatsAppLink(planMessage)}
                     target="_blank"
                     rel="noopener noreferrer"
-                   >
-                     {isLifetime ? 'Get Lifetime Access' : 'Start My Bakery'}
-                   </Button>
+                  >
+                    {isGrowthAnnual ? 'Get Annual Plan' : 'Start My Bakery'}
+                  </Button>
                 </div>
               </div>
             );
@@ -193,8 +185,8 @@ const Pricing: React.FC = () => {
             <span className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> No contracts</span>
           </div>
           <div className="flex justify-center flex-wrap gap-4">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="animate-pulse"
               href={getWhatsAppLink("Hello Team CakeSarthi! I want to Start a Free Demo for my bakery.")}
               target="_blank"
@@ -202,8 +194,8 @@ const Pricing: React.FC = () => {
             >
               Get Started Now
             </Button>
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               variant="outline"
               href={DEMO_LINK}
               target="_blank"

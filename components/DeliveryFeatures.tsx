@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Navigation, Clock, Calculator, Settings, DollarSign, Map, ShieldCheck } from 'lucide-react';
+import { MapPin, Clock, Calculator, Settings, Map, ShieldCheck } from 'lucide-react';
 
 const DeliveryFeatures: React.FC = () => {
   return (
@@ -11,19 +11,6 @@ const DeliveryFeatures: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-100 text-indigo-700 font-bold text-sm mb-6">
-            <Navigation size={16} />
-            New Feature Alert 🚚
-          </div>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
-            Smart & Hassle-Free <span className="text-indigo-600">Delivery Management</span>
-          </h2>
-          <p className="text-xl text-gray-600">
-            Welcome to the future of logistics! Hamne delivery process ko smooth, transparent aur efficient banane ke liye latest features integrate kiye hain.
-          </p>
-        </div>
-
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-24">
           
           {/* Customer Side */}
