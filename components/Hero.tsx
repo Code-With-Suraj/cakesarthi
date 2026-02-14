@@ -70,7 +70,7 @@ const Hero: React.FC = () => {
               </div>
               <div className="flex items-center gap-1">
                 <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                <span>Loved by 500+ Bakers</span>
+                <span>Loved by 5+ Bakers</span>
               </div>
             </div>
           </div>
