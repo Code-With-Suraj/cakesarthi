@@ -1,5 +1,6 @@
 import React from 'react';
-import { BENEFITS } from '../constants';
+import { BENEFITS, getWhatsAppLink } from '../constants';
+import Button from './Button';
 
 const Benefits: React.FC = () => {
   return (
@@ -31,9 +32,14 @@ const Benefits: React.FC = () => {
               Google Sheets as Database. No hosting fees. Secure Owner Lock. 
               <br/>Simple. Powerful. Free Serverless Backend.
             </p>
-            <button className="bg-white text-pink-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors">
-              Learn More About Tech
-            </button>
+            <Button 
+              variant="primary" 
+              className="bg-white !text-pink-600 hover:bg-gray-100 shadow-xl"
+              href={getWhatsAppLink("Hello CakeSarthi! I want to understand the technical setup of using Google Sheets as my database. Is it secure?")}
+              target="_blank"
+            >
+              Get Tech Consultation Free
+            </Button>
           </div>
           <div className="absolute top-0 right-0 -mt-10 -mr-10 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-0 -mb-10 -ml-10 w-64 h-64 bg-black/10 rounded-full blur-3xl"></div>

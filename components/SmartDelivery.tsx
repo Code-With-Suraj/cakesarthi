@@ -1,5 +1,7 @@
 import React from 'react';
-import { Clock, Route, Sliders, MapPin, Truck, ShieldCheck } from 'lucide-react';
+import { Clock, Route, Sliders, MapPin, Truck, ShieldCheck, ArrowRight } from 'lucide-react';
+import { getWhatsAppLink } from '../constants';
+import Button from './Button';
 
 const SmartDelivery: React.FC = () => {
   const features = [
@@ -35,7 +37,6 @@ const SmartDelivery: React.FC = () => {
 
   return (
     <section className="py-24 bg-white relative overflow-hidden">
-      {/* Background Decor */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-[10%] right-[5%] w-72 h-72 bg-blue-50 rounded-full blur-3xl opacity-70"></div>
         <div className="absolute bottom-[10%] left-[5%] w-72 h-72 bg-pink-50 rounded-full blur-3xl opacity-70"></div>
@@ -43,7 +44,6 @@ const SmartDelivery: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Header */}
         <div className="text-center max-w-4xl mx-auto mb-20">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-700 font-bold text-sm mb-6 border border-blue-100 shadow-sm">
             <Truck size={16} />
@@ -60,7 +60,6 @@ const SmartDelivery: React.FC = () => {
           </p>
         </div>
 
-        {/* Features Grid */}
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
           {features.map((feature, idx) => (
             <div 
@@ -68,19 +67,11 @@ const SmartDelivery: React.FC = () => {
               className="group bg-white rounded-3xl p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
             >
               <div className={`absolute top-0 right-0 w-32 h-32 rounded-bl-full opacity-20 transition-transform group-hover:scale-110 ${feature.color.split(' ')[0]}`}></div>
-              
               <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${feature.color}`}>
                 <feature.icon size={28} />
               </div>
-
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
-                {feature.title}
-              </h3>
-              
-              <p className="text-gray-600 leading-relaxed mb-4 text-lg">
-                {feature.desc}
-              </p>
-
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">{feature.title}</h3>
+              <p className="text-gray-600 leading-relaxed mb-4 text-lg">{feature.desc}</p>
               {feature.details && (
                 <ul className="space-y-2 mt-4 bg-gray-50 p-4 rounded-xl border border-gray-100">
                   {feature.details.map((detail, dIdx) => (
@@ -95,6 +86,19 @@ const SmartDelivery: React.FC = () => {
           ))}
         </div>
 
+        <div className="mt-20 text-center bg-blue-600 rounded-3xl p-10 text-white shadow-2xl">
+          <h3 className="text-3xl font-bold mb-4">Delivery System Setup Karvana Hai? 🚚</h3>
+          <p className="text-blue-100 mb-8 text-lg">Hume WhatsApp karein aur batayein ki aapko kis tarah ki delivery zones chahiyein.</p>
+          <Button 
+            variant="primary" 
+            size="lg" 
+            className="bg-white !text-blue-600 hover:bg-gray-100 shadow-none group"
+            href={getWhatsAppLink("Hello Team CakeSarthi! I want to set up Smart Delivery management for my bakery. Please help me with delivery slots and distance pricing.")}
+            target="_blank"
+          >
+            Setup My Logistics Now <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+          </Button>
+        </div>
       </div>
     </section>
   );

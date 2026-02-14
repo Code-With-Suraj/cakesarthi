@@ -6,6 +6,10 @@ export const CONTACT_INFO = {
   displayPhone: "+91 88516 66208"
 };
 
+export const getWhatsAppLink = (message: string) => {
+  return `https://wa.me/${CONTACT_INFO.whatsapp}?text=${encodeURIComponent(message)}`;
+};
+
 export const DEMO_LINK = "https://cakesarthi.surajdx.com";
 
 export const NAV_LINKS = [
@@ -133,7 +137,7 @@ export const PRICING_PLANS = [
       { name: "Sweet Coins Loyalty Program", included: false },
       { name: "Custom Cake Requests", included: false },
       { name: "Smart Location & Distance Calc", included: false },
-      { name: "Occasion Reminder Dashboard", included: false },
+      { name: "Google Maps Integration", included: false },
       { name: "Revenue Tracking", included: false },
       { name: "Custom Branding", included: false },
     ],
@@ -147,19 +151,17 @@ export const PRICING_PLANS = [
     period: "/ month",
     subtitle: "For Local Bakeries",
     features: [
-      { name: "Digital Cake Menu", included: true },
-      { name: "WhatsApp Product Sharing", included: true },
-      { name: "Online Cart & Checkout", included: true },
-      { name: "Mobile Friendly Design", included: true },
-      { name: "Owner Dashboard", included: true },
-      { name: "Order Status Management", included: true },
+      { name: "Everything in Basic", included: true },
       { name: "Flexible Delivery Slots", included: true },
+      { name: "Smart Location & Distance Calc", included: true },
+      { name: "Google Maps Integration", included: true },
+      { name: "Dynamic Delivery Pricing", included: true },
+      { name: "Custom Cake Requests", included: true },
       { name: "Add-ons Upselling", included: true },
       { name: "Sweet Coins Loyalty Program", included: true },
-      { name: "Smart Location & Distance Calc", included: true },
-      { name: "Dynamic Delivery Pricing", included: true },
       { name: "WhatsApp Invoice Generation", included: true },
       { name: "Revenue Tracking", included: true },
+      { name: "Priority Support", included: true },
       { name: "Custom Branding", included: true },
     ],
     highlight: true,
@@ -175,15 +177,7 @@ export const PRICING_PLANS = [
     subtitle: "For Smart Businesses",
     features: [
       { name: "Everything in Growth", included: true },
-      { name: "Pay for 10 Months, Get 12", included: true },
-      { name: "Priority Support", included: true },
-      { name: "Sweet Coins Loyalty Program", included: true },
-      { name: "Smart Location & Distance Calc", included: true },
-      { name: "Dynamic Delivery Pricing", included: true },
-      { name: "Google Maps Integration", included: true },
-      { name: "Custom Cake Requests", included: true },
-      { name: "WhatsApp Invoice Generation", included: true },
-      { name: "Custom Branding", included: true },
+      { name: "Best Value – Save 2 Months", included: true },
     ],
     highlight: false,
     badge: "Best Value – Save 2 Months",

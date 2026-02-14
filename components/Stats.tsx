@@ -1,5 +1,8 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts';
+import { TrendingUp } from 'lucide-react';
+import { getWhatsAppLink } from '../constants';
+import Button from './Button';
 
 const data = [
   { name: 'Jan', orders: 12, revenue: 5000 },
@@ -39,14 +42,19 @@ const Stats: React.FC = () => {
                    <p className="text-gray-600">Occasion Tracking se purane customers ko wapas layein.</p>
                  </div>
                </li>
-               <li className="flex items-start">
-                 <div className="flex-shrink-0 h-6 w-6 rounded-full bg-green-500 flex items-center justify-center text-white font-bold text-xs mt-1">3</div>
-                 <div className="ml-4">
-                   <h4 className="text-lg font-bold text-gray-900">Professional Brand</h4>
-                   <p className="text-gray-600">Customers professional logon ko zyada paise dene ko taiyar rehte hain.</p>
-                 </div>
-               </li>
             </ul>
+
+            <div className="pt-6">
+              <Button 
+                variant="secondary" 
+                size="lg" 
+                className="group"
+                href={getWhatsAppLink("Hello Team CakeSarthi! I want to understand how my bakery revenue can grow by 40% using your platform. Please share details.")}
+                target="_blank"
+              >
+                Grow My Revenue <TrendingUp className="ml-2 w-5 h-5 group-hover:scale-110 transition-transform" />
+              </Button>
+            </div>
           </div>
 
           <div className="bg-white p-6 md:p-8 rounded-2xl shadow-xl border border-gray-100">

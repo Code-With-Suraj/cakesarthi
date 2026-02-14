@@ -1,5 +1,5 @@
 import React from 'react';
-import { TESTIMONIALS, DEMO_LINK } from '../constants';
+import { TESTIMONIALS, DEMO_LINK, getWhatsAppLink } from '../constants';
 import { Quote, ExternalLink } from 'lucide-react';
 import Button from './Button';
 
@@ -40,9 +40,14 @@ const Testimonial: React.FC = () => {
                    Aaj hi takneek ko apnayein aur apne sapno ko bake karein!
                  </p>
                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                   <button className="bg-pink-600 hover:bg-pink-700 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg shadow-pink-500/30 transition-all hover:scale-105">
+                   <Button 
+                     size="lg" 
+                     className="animate-pulse !px-12"
+                     href={getWhatsAppLink("Namaste CakeSarthi Team! I'm ready to upgrade my bakery. Please help me choose the best plan for my home-business.")}
+                     target="_blank"
+                   >
                      Get CakeSarthi Now
-                   </button>
+                   </Button>
                    <a 
                      href={DEMO_LINK} 
                      target="_blank" 
@@ -53,8 +58,6 @@ const Testimonial: React.FC = () => {
                    </a>
                  </div>
                </div>
-               
-               {/* Decorative Circles */}
                <div className="absolute -left-16 -top-16 w-48 h-48 bg-pink-600/20 rounded-full blur-2xl"></div>
                <div className="absolute -right-16 -bottom-16 w-48 h-48 bg-indigo-600/20 rounded-full blur-2xl"></div>
             </div>
