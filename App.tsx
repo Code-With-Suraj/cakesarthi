@@ -6,6 +6,7 @@ import Features from './components/Features';
 import WhatsAppFeatures from './components/WhatsAppFeatures';
 import SmartDelivery from './components/SmartDelivery';
 import LoyaltyProgram from './components/LoyaltyProgram';
+import GrowthTools from './components/GrowthTools';
 import Stats from './components/Stats';
 import Pricing from './components/Pricing';
 import Benefits from './components/Benefits';
@@ -23,6 +24,7 @@ function App() {
         <WhatsAppFeatures />
         <SmartDelivery />
         <LoyaltyProgram />
+        <GrowthTools />
         <Stats />
         <Pricing />
         <Benefits />

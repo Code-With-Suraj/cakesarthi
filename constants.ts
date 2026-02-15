@@ -132,6 +132,8 @@ export const PRICING_PLANS = [
       { name: "Mobile Friendly Design", included: true },
       { name: "Owner Dashboard", included: true },
       { name: "Order Status Management", included: true },
+      { name: "Smart Customer Analytics", included: false },
+      { name: "Advanced Coupon Engine", included: false },
       { name: "Add-ons Upselling", included: false },
       { name: "Flexible Delivery Slots", included: false },
       { name: "Sweet Coins Loyalty Program", included: false },
@@ -152,6 +154,8 @@ export const PRICING_PLANS = [
     subtitle: "For Local Bakeries",
     features: [
       { name: "Everything in Basic", included: true },
+      { name: "Smart Customer Analytics", included: true },
+      { name: "Advanced Coupon Engine", included: true },
       { name: "Flexible Delivery Slots", included: true },
       { name: "Smart Location & Distance Calc", included: true },
       { name: "Google Maps Integration", included: true },

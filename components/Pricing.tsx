@@ -1,6 +1,6 @@
 import React from 'react';
 import { PRICING_PLANS, SETUP_SERVICES, CONTACT_INFO, DEMO_LINK } from '../constants';
-import { Check, X, Star, ExternalLink } from 'lucide-react';
+import { Check, X, ExternalLink, Smartphone, AlertCircle, Upload, Image as ImageIcon } from 'lucide-react';
 import Button from './Button';
 
 const Pricing: React.FC = () => {
@@ -147,21 +147,91 @@ const Pricing: React.FC = () => {
           })}
         </div>
 
-        {/* Optional Setup Section */}
-        <div className="mt-16 max-w-2xl mx-auto bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden">
-          <div className="bg-gray-50 px-6 py-4 border-b border-gray-100">
-            <h4 className="font-bold text-gray-900 flex items-center gap-2">
-              <Star className="text-yellow-500 w-5 h-5 fill-current" />
-              Optional One-Time Setup
-            </h4>
+        {/* Mobile App Add-on Section */}
+        <div className="max-w-5xl mx-auto mt-12 px-4">
+          <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-2xl border border-gray-700 flex flex-col md:flex-row items-center justify-between gap-8 group hover:border-pink-500/50 transition-colors duration-500">
+            
+            {/* Glow Effects */}
+            <div className="absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 bg-pink-600 rounded-full blur-[100px] opacity-30 group-hover:opacity-40 transition-opacity"></div>
+            <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-64 h-64 bg-indigo-600 rounded-full blur-[100px] opacity-30 group-hover:opacity-40 transition-opacity"></div>
+            
+            <div className="relative z-10 flex-1 text-center md:text-left space-y-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 text-xs font-bold uppercase tracking-wider border border-pink-500/30 shadow-[0_0_15px_rgba(236,72,153,0.3)]">
+                <Smartphone size={14} />
+                Exclusive Add-on
+              </div>
+              <h3 className="text-2xl md:text-4xl font-extrabold text-white leading-tight">
+                Want a <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">Mobile App</span> too? 📱
+              </h3>
+              
+              <div className="space-y-4">
+                <p className="text-gray-300 text-lg">
+                  Get your own branded Android App on customers' phones.
+                </p>
+                
+                {/* Clarification Box */}
+                <div className="bg-white/10 border border-white/10 rounded-xl p-4 flex gap-3 items-start max-w-lg mx-auto md:mx-0 text-left">
+                   <AlertCircle className="text-pink-400 shrink-0 mt-0.5" size={18} />
+                   <div className="text-sm">
+                      <p className="text-pink-200 font-bold mb-1">Important Note:</p>
+                      <p className="text-gray-300 leading-relaxed">
+                        Ye <span className="text-white font-bold">₹899</span> sirf App banane ki <span className="underline decoration-pink-500 decoration-2 underline-offset-2">One-Time Cost</span> hai.
+                        <br/>
+                        Monthly subscription (Basic/Growth) alag rahega.
+                      </p>
+                   </div>
+                </div>
+
+                <p className="text-gray-400 text-sm font-medium">
+                  • Professional Icon • One-Click Access • Brand Visibility
+                </p>
+              </div>
+            </div>
+
+            <div className="relative z-10 flex flex-col items-center md:items-end gap-4 bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-sm w-full md:w-auto min-w-[300px]">
+              <div className="text-center md:text-right w-full">
+                <p className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-1">One-Time Development Fee</p>
+                <div className="flex items-baseline gap-1 justify-center md:justify-end">
+                  <span className="text-4xl font-extrabold text-white">₹899</span>
+                  <span className="text-gray-400 text-lg">only</span>
+                </div>
+                <div className="mt-2 pt-2 border-t border-gray-700 text-xs text-gray-400 flex flex-col gap-1 items-center md:items-end">
+                  <span>+ Monthly Plan Charges (Separate)</span>
+                </div>
+              </div>
+              <Button 
+                variant="primary"
+                className="bg-white !text-gray-900 hover:bg-gray-100 border-none shadow-xl w-full font-bold"
+                href={getWhatsAppLink("Hello Team CakeSarthi! I understand that ₹899 is a one-time cost for the App and subscription is separate. I want to proceed.")}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Get App + Plan 🚀
+              </Button>
+            </div>
           </div>
-          <div className="divide-y divide-gray-100">
+        </div>
+
+        {/* Complimentary Onboarding Section */}
+        <div className="mt-24 max-w-4xl mx-auto">
+          <div className="text-center mb-10">
+            <h4 className="text-2xl font-bold text-gray-900">Complimentary Onboarding 🤝</h4>
+            <p className="text-gray-500 mt-2">Shuruat mein hum aapki puri madad karenge, bilkul FREE.</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6">
             {SETUP_SERVICES.map((item, idx) => (
-              <div key={idx} className="px-6 py-4 flex justify-between items-center hover:bg-gray-50 transition-colors">
-                <span className="text-gray-700 font-medium">{item.service}</span>
-                <div className="text-right">
-                  <span className="block font-bold text-green-600">{item.price}</span>
-                  <span className="text-xs text-gray-400">{item.note}</span>
+              <div key={idx} className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 hover:border-pink-200 flex items-start gap-4">
+                <div className="bg-pink-50 p-3 rounded-xl text-pink-600 shrink-0">
+                  {idx === 0 ? <Upload size={24} /> : <ImageIcon size={24} />}
+                </div>
+                <div className="flex-1">
+                  <h5 className="font-bold text-gray-900 text-lg mb-1">{item.service}</h5>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-gray-400 line-through text-sm">₹399</span>
+                    <span className="bg-green-100 text-green-700 text-xs font-bold px-2 py-0.5 rounded-full uppercase tracking-wide">FREE NOW</span>
+                  </div>
+                  <p className="text-gray-500 text-sm leading-snug">{item.note.replace('Future:', 'Standard Price:')}</p>
                 </div>
               </div>
             ))}
